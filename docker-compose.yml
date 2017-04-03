@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+  hive-metastore:
+    build: .
+    container_name: hive-metastore
+    env_file:
+      - ./hadoop-hive.env
+    command: /opt/hive/bin/hive --service metastore
+    ports:
+      - "9083:9083"
+  hive-metastore-postgresql:
+    image: bde2020/hive-metastore-postgresql:2.1.0
