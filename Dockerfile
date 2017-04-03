@@ -35,3 +35,4 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 EXPOSE 9083
 
 ENTRYPOINT ["entrypoint.sh"]
+CMD ["/opt/hive/bin/hive", " --service", "metastore"]
