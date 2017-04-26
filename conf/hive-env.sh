@@ -56,3 +56,4 @@
 export HADOOP_CLIENT_OPTS="${HADOOP_CLIENT_OPTS} -Xmx${HADOOP_HEAPSIZE:-1024}m"
 
 export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:$HADOOP_HOME/share/hadoop/tools/lib/*
+export HIVE_AUX_JARS_PATH="/opt/hive/hcatalog/share/hcatalog";
