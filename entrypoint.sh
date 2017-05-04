@@ -28,4 +28,6 @@ function configure() {
 }
 
 configure hive HIVE_SITE_CONF
-exec $@
+
+set -x
+exec "$@"
