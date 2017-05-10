@@ -30,7 +30,10 @@ ADD conf/ivysettings.xml $HIVE_HOME/conf
 ADD conf/llap-daemon-log4j2.properties $HIVE_HOME/conf
 
 COPY entrypoint.sh /usr/local/bin/
+COPY repair_tables.sh /usr/local/bin/
+
 RUN chmod +x /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/repair_tables.sh
 
 EXPOSE 9083
 
