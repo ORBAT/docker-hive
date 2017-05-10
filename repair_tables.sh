@@ -18,5 +18,5 @@ if [[-z "$tables"]]; then
     exit 2
 fi
 
-xargs -ITBL hive --hiveconf hive.metastore.uris=$METASTORE_URI --hiveconf fs.s3a.secret.key="$S3_SECRET_ACCESS_KEY" --hiveconf fs.s3a.access.key=$S3_ACCESS_KEY \
+echo $tables|xargs -ITBL hive --hiveconf hive.metastore.uris=$METASTORE_URI --hiveconf fs.s3a.secret.key="$S3_SECRET_ACCESS_KEY" --hiveconf fs.s3a.access.key=$S3_ACCESS_KEY \
 -e "msck repair table TBL;"
