@@ -35,5 +35,4 @@ function configure() {
 
 configure hive HIVE_SITE_CONF
 
-set -x
 exec "$@"
